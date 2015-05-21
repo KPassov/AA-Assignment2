@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage[margin=1.5in]{geometry}
+\usepackage{upgreek}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{tikz}
+% \usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mathrsfs}
+\usepackage[toc,page]{appendix}
+
+%Section style
+\usepackage{etoolbox} %for configuration of sloppy
+\usepackage{xcolor}
+
+
+\definecolor{secnum}{RGB}{102,102,102}
+
+\makeatletter
+    \def\@seccntformat#1{\llap{\color{secnum}\csname the#1\endcsname\hskip 16pt}}
+\makeatother
+%end section style
+
+\begin{document}
+
+\begin{center}
+\textsc{\Large Advanced algorithms and data structures}\\[0.5cm]
+\textsc{\large Assignment 1}\\[0.5cm]
+\textsc{\large Lasse Ahlbech Madsen, Kasper Passov}\\[0.5cm]
+\vspace{1 cm}
+\end{center}
+% \tableofcontents
+
+\section*{Exercise 1}
+\input{Exercise1/1.tex}
+\section*{Exercise 2}
+\input{Exercise2/21.tex}
+\input{Exercise2/22.tex}
+\input{Exercise2/23.tex}
+\input{Exercise2/24.tex}
+\input{Exercise2/25.tex}
+\section*{Exercise3}
+\input{Exercise3/31.tex}
+\input{Exercise3/34.tex}
+\input{Exercise3/35.tex}
+\end{document}

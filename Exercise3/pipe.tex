@@ -1,0 +1,10 @@
+\begin{tikzpicture}[->,shorten >=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=olive!20,draw,font=\sffamily\Large\bfseries}]
+
+  \node[main node] (1) {v};
+  \node[main node] (2) [right of=1] {w};
+  \coordinate[above of=2] (d1); 
+
+  \path[every node/.style={font=\sffamily\small}]
+  (1)  edge [] node[above] {l-u} (2);
+\end{tikzpicture}

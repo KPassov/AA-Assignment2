@@ -1,0 +1,19 @@
+\subsection*{2.2}%Exercise 2.2}
+As a breakpoint in an edge $z_{fg}$ must have a turn of 90 degree or less, its counterturn on $z_{gf}$ must have 180 degrees or more, and be an outer turn. 
+So $z_{gf}$ must be the outer turns of $z_{fg}$.
+We now define the constraint:
+\begin{equation}
+    b_f = \sum_{g \in E}(z_{fg} - z_{gf})  + \sum_{v \in G} x_{vf}
+\end{equation} 
+For a this would be: 
+\begin{align*}
+    b_a &= z_{ab} - z_{ba} + z_{ac} - z_{ca} + z_{ae} - z_{ea} + x_{v_1a} + x_{v_3a} + x_{v_5a} + x_{v_6a} + x_{v_7a}\\
+    b_a &= 0 - 2 + 0 - 1 + 0 - 4 + 0 + 1 + 1 + 1 + 0 = -4
+\end{align*} 
+Which is expected of the external face.\\
+For e this would be:
+\begin{align*}
+    b_e &= z_{ea} - z_{ae} + z_{ed} - z_{de} + x_{v_3e} + x_{v_4e} + x_{v_5e} + x_{v_6e} + x_{v_7e}\\
+    b_e &= 4      - 0      + 0      - 2      + 1        + 1        + -1       + 1        + 0 = 4
+\end{align*} 
+Which is expected of an internal face.

@@ -1,9 +1,8 @@
-\subsection*{4b}
+\paragraph{b}
 
-\begin{align*}
-    A \cap B \cap S^{k}_{n}(A \cup B) &= S^{k}_{n}(A) \cap S^{k}_{n}(B) \cap S^{k}_{n}(A \cup B)\\
-    &\supseteq
-\end{align*}
+\begin{equation}\label{eq:4b}
+    A \cap B \cap S^{k}_{n}(A \cup B) \supseteq S^{k}_{n}(A) \cap S^{k}_{n}(B) \cap S^{k}_{n}(A \cup B)
+\end{equation}
 
 \begin{align*}
     A &=\{a_1, a_2, \dots , a_{i}, a_{i+1} \dots  , a_n\}\\
@@ -22,4 +21,8 @@
     S^{k}_{n}(A) \cap S^{k}_{n}(B) = \{a | a \in A, b \in B, a = b, a_{pos} \le i, b_{pos} < k-i\}
 \end{equation*}
 
-$a_{pos} > i$ $b_{pos} \ge k-i$
+\begin{align*}
+    a_{pos} & > i \\
+    b_{pos} & \ge k-i
+\end{align*}
+F\o lgende er ikke i foreningsmængden da det ikke er i ligningen (\ref{eq:4b}).

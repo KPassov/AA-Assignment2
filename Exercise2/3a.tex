@@ -1,5 +1,5 @@
 \paragraph{a}
-Min-heap.
-a) 
-O(n * h(x)) + O(n * lg(n)) If we use a structure to save the hashed value. 
-O(h(x)) to hash the value and O(lg(n)) to insert it.
+We will use a min-heap, where each node in the heap is a structure which consist
+of the hashed value and the key. Then the hash is used for comparison in the
+heap and we therefore get a running time of O(n * h(x)) + O(n * lg(n)) as we
+we hash all keys and insert them into the heap.

@@ -1,7 +1,12 @@
 \paragraph{c}
-
+We wish to compute the following.
 \begin{equation*}
-    |S^{k}_{n}(A) \cap S^{k}_{n}(B) \cap S^{k}_{n}(S^{k}_{n}(A) \cup S^{k}_{n}(B))|/k
+    \frac{|S^{k}_{n}(A) \cap S^{k}_{n}(B) \cap S^{k}_{n}(S^{k}_{n}(A) \cup S^{k}_{n}(B))|}{k}
 \end{equation*}
-
-$O(k \cdot h(x))$
+\begin{itemize}
+    \item{$S^{k}_{n}(A)$} The first instance takes $O(k)$ as we wish to take the k first values of A, the second can be done in constant time.
+    \item{$S^{k}_{n}(B)$} Will be the same as above, so $O(k)$.
+    \item{$\cap$} can be done in $O(k)$. 
+    \item{$\cup$} Here we have to hash the values of A and B followed by comparing each element of the lists from the top. We get a runtime of $k * h(x)$.
+\end{itemize}
+The largest runtime here is $O(k \cdot h(x))$, so that would be our runtime.

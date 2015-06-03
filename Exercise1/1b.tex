@@ -3,7 +3,7 @@
     A \in U
 \end{equation}
 \begin{equation}
-    m \le 100\|A\|^{2}
+    m \le 100|A|^{2}
 \end{equation}
 \begin{equation}
     Pr \left[ \frac{h_m(x)}{m} = \frac{h_m(y)}{m}\right]
@@ -11,8 +11,8 @@
 \begin{equation}
     Pr \left[ h_m(x) = h_m(y) \right]
 \end{equation}
-$h_m$ is strongly universal so the probability of every pair-wise event is $\frac{1}{m^{2}}$.
-So the probability of 2 keys x and y getting the same hash value is $\frac{1}{m^{2}}$.
+The probability of picking any key is 1. The probability of picking the same key is at best $\frac{1}{100|A|^{2}}$.
+So the probability of 2 keys x and y getting the same hash value is $\frac{1}{100|A|^{2}}$.
 % \begin{equation}
     % 0 \le h(x) < 1
 % \end{equation}

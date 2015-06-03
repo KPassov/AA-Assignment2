@@ -1,28 +1,37 @@
 \paragraph{b}
 
+We want to show that:
 \begin{equation}\label{eq:4b}
     A \cap B \cap S^{k}_{n}(A \cup B) \supseteq S^{k}_{n}(A) \cap S^{k}_{n}(B) \cap S^{k}_{n}(A \cup B)
 \end{equation}
 
+We still assume that A and B are lists sorted by their hashvalues, where i in .
 \begin{align*}
     A &=\{a_1, a_2, \dots , a_{i}, a_{i+1} \dots  , a_n\}\\
     B &=\{b_1, b_2, \dots , b_{k-i}, \dots , b_m\}
 \end{align*}
 
+To start with we see that:
 \begin{equation*}
     S^{k}_{n}(A\cup B) =\{a_1, a_2, \dots , a_{i}, b_1, b_2, \dots , b_{k-i-1}\}
 \end{equation*}
 
+We have:
 \begin{equation*}
     A \cap B = \{ a | a \in A, b \in B, a = b\}
 \end{equation*}
 
+On the right hand side we get (here $a_{pos}$ and $b_{pos}$ are the position the element
+in the sorted array):
 \begin{equation*}
-    S^{k}_{n}(A) \cap S^{k}_{n}(B) = \{a | a \in A, b \in B, a = b, a_{pos} \le i, b_{pos} < k-i\}
+    S^{k}_{n}(A) \cap S^{k}_{n}(B) = \{a | a \in A, b \in B, a = b, a_{pos} \le k, b_{pos} \le k\}
 \end{equation*}
 
+In $A \cap B$ we have some elements where:
 \begin{align*}
-    a_{pos} & > i \\
-    b_{pos} & \ge k-i
+    a_{pos} & > k \\
+    b_{pos} & > k
 \end{align*}
-F\o lgende er ikke i foreningsmængden da det ikke er i ligningen (\ref{eq:4b}).
+But these will not be in the intersection with $S^{k}_{n}(A \cup B)$ as it only
+holds the lowest k keys in the union and therefore the keys above these can not
+be in the intersection.

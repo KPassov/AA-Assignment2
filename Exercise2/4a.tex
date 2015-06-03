@@ -1,30 +1,37 @@
 \paragraph{a}
-\begin{align*}
-    S^{k}_{n}(A \cup B) &= S^{k}_{n}(S^{k}_{n}(A) \cup S^{k}_{n}(B))\\
-    &\supseteq
-\end{align*}
+We have to prove the following equation:
+\begin{equation}
+    S^{k}_{n}(A \cup B) = S^{k}_{n}(S^{k}_{n}(A) \cup S^{k}_{n}(B))\\
+\end{equation}
 
-(Left side)
+To do that we start by showing:
+\begin{equation}
+    S^{k}_{n}(A \cup B) \supseteq S^{k}_{n}(S^{k}_{n}(A) \cup S^{k}_{n}(B))\\
+\end{equation}
+
+We assume that we have the list A and B where the elements are sorted after the
+hashed values. Then when we want to get $S^{k}_{n}(A\cup B)$ we want to take
+the first $i$ elements in A and the first $k-i$ elements in B where $i$.
 \begin{align*}
     A &=\{a_1, a_2, \dots , a_{i}, a_{i+1} \dots  , a_n\}\\
     B &=\{b_1, b_2, \dots , b_{k-i}, \dots , b_m\}
+    S^{k}_{n}(A\cup B) =\{a_1, a_2, \dots , a_{i}, \dots,  b_1, b_2, \dots , b_{k-i-1}\}
 \end{align*}
-\begin{equation*}
-    S^{k}_{n}(A\cup B) =\{a_1, a_2, \dots , a_{i}, a_{i+1} \dots  , a_n, b_1, b_2, \dots , b_{k-i}, \dots , b_m\}
-\end{equation*}
-\\ \\ \\
-(Right side)
+
+On the right side we get:
 \begin{align*}
-    A' &=\{a_1, a_2, \dots , a_{i}, a_{n}\}\\
-    B' &=\{b_1, b_2, \dots , b_{i-k}, \dots , b_k\}
+    A' &= S^{k}_{n}(A) = (\{a_1, a_2, \dots , a_{i}, a_{n}\}\\
+    B' &= S^{k}_{n}(B) = \{b_1, b_2, \dots , b_{i-k}\}
 \end{align*}
+We then get:
 \begin{equation*}
     S^{k}_{n}(A' \cup B')
 \end{equation*}
-
+Here we see:
 \begin{align*}
-    A' &\supseteq A\\
-    B' &\supseteq B\\
+    A &\supseteq A'\\
+    B &\supseteq B'\\
     |A'| &= k\\
     |B'| &= k
 \end{align*}
+When we have this it is trivial to see that they are same.

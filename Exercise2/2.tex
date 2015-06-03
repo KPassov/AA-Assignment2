@@ -1,18 +1,16 @@
+We wish to prove that:
+\begin{equation*}
+    E\left[ \frac{|S^{k}_{n}(A) \cap C |}{k}\right] &= \frac{|A|}{|C|} 
+\end{equation*}\\
+\begin{proof}
+With a list of A values the probability of us picking any random value is 
+\begin{equation*}
+    \frac{1}{|A|} \cdot |A| = 1
+\end{equation*}
+the probability of picking that value again is $1/|A|$.
 \begin{align*}
-    &E\left[ \frac{|S^{k}_{n}(A) \cap C |}{k}\right] = \frac{|C|}{|A|}\\\\
-    &Pr\left[ \frac{|S^{k}_{n}(A) \cap C |}{k} = \frac{|C|}{|A|}\right]\\\\
+    E\left[ \frac{|S^{k}_{n}(A) \cap C |}{k}\right] &= \sum\limits_{c \in C}Pr[c \in S^{K}_{h}(A)]\\
+    &= \sum\limits_{c \in C} \frac{1}{|A|}\\
+    &= \frac{|C|}{|A|}\qedhere
 \end{align*}
-
-\begin{equation}
-    r = \frac{|C|}{|A|} \cdot k
-\end{equation}
-
-\begin{equation}
-    \frac{ {|C|\choose r} \cdot {|A| - r \choose |C| - r}} {{|A| \choose |C|}}
-\end{equation}
-
-This sucks.
-
-% \begin{equation} 
-    % \frac{$${|C| \choose r} \cdot {|A| - r \choose |C| - r} {|A| \choose |C|}$$
-% \end{equation}
+\end{proof}

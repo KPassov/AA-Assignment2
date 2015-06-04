@@ -1,10 +1,10 @@
 \begin{proof}
     We assume that
-    \begin{equation}
+    \begin{equation}\label{5:I}
         |{x \in A | h(x) < p}| \ge k 
     \end{equation}
     and
-    \begin{equation}
+    \begin{equation}\label{5:II}
         |{x \in C | h(x) < p}| \le (1 + b)p|C| 
     \end{equation}
     and wish to prove that
@@ -16,7 +16,14 @@
         f &= \frac{|C|}{|A|} \\
         |C| &= f |A|\\
         n &= |A|\\
-        p &= \frac{k}{n(1-a}
+        p &= \frac{k}{|A|(1-a)}
     \end{align*}
-    
+    from (\ref{5:II}) we put in our defined p and $|C|$ and get
+    \begin{align*}\label{5:II}
+        |{x \in C | h(x) < p}| &\le (1 + b)\frac{k}{|A|(1-a)} f |A|\\
+         &\le (1 + b)\frac{k}{(1-a)} f\\
+         &\le \frac{(1 + b)}{(1-a)} fk 
+    \end{align*}
+    This gives us that $|C \cap S|$ can be no more than
+    $\frac{(1 + b)}{(1-a)} fk$ as all elements in $S$ also hashes beneath p as shown by (\ref{5:I}).
 \end{proof}

@@ -1,20 +1,34 @@
 
 \begin{proof}
+    We want to show that this is true by the use of lemma 1.
+    \begin{equation*}
+        Pr[X_A < \mu_A(1-a)] \le \frac{1}{r^2}\\
+    \end{equation*}
 
+    So we did these substitutions:
     \begin{align*}
-       \mu_A \cdot a 
-    \end{align*}
-
-    \begin{align*}
-        &Pr[X_A < \mu_A(1-a)] &\le \frac{1}{r^2}\\ 
+        &Pr[X_A < \mu_A(1-a)] &\le \frac{1}{r^2}\\
         &Pr[X_A < \mu_A - \mu_A a] &\le \frac{1}{r^2}\\
         &Pr[X_A - \mu_A < - \mu_A a] &\le \frac{1}{r^2}\\
         &Pr[|X_A - \mu_A| > \mu_A a] &\le \frac{1}{r^2}\\
         &Pr[|X_A - \mu_A| > \frac{k}{1-a} \frac{r}{\sqrt{k}}]   &\le \frac{1}{r^2}\\
         &Pr[|X_A - \mu_A| > \frac{k}{1-a} \frac{1}{\sqrt{k}} r] &\le \frac{1}{r^2}\\
         &Pr[|X_A - \mu_A| > \frac{\sqrt{k}}{1-a} r]&\le \frac{1}{r^2}\\
-        &???&\\
-        &Pr[|X_A - \mu_A| > r \sqrt{\mu}] &\le \frac{1}{r^2}
     \end{align*}
+    We wanted to end up with:
+    \begin{equation*}
+        Pr[|X_A - \mu_A| > r \sqrt{\mu}] \le \frac{1}{r^2}
+    \end{equation*}
+
+    But what we have is not completely it as we have:
+    \begin{align*}
+        r \sqrt{\mu} &> \frac{\sqrt{k}}{1-a} r
+        |X_A - \mu_A| &> \frac{\sqrt{k}}{1-a} r
+    \end{align*}
+    and therefore we can not say:
+    \begin{equation*}
+        |X_A - \mu_A| > r \sqrt{\mu}
+    \end{equation*}
+
 
 \end{proof}

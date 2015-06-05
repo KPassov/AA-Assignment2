@@ -1,12 +1,30 @@
 \begin{proof}
+    We want to show that the following is true using lemma 1.
+    \begin{equation*}
+        Pr[X_C < (1-ab)\mu_C] \le \frac{1}{r^2}\\
+    \end{equation*}
 
+    So we did some substitutions where our goal was to end up with lemma 1:
     \begin{alignat*}{2}
-        Pr[&X_C < (1+b)\mu_C]& \le \frac{1}{r^2}\\ 
+        Pr[&X_C < (1+b)\mu_C]& \le \frac{1}{r^2}\\
         &X_C < \mu_C + \mu_C b&\\
         &X_C - \mu_C < \mu_C b&\\
         Pr[&X_C - \mu_C < \mu_C r \frac{1}{\sqrt{k}}]& \le \frac{1}{r^2}\\ 
-        &???&\\
-        Pr[&|X_C - \mu_C| > r \sqrt{\mu}] &\le \frac{1}{r^2}
     \end{alignat*}
+    So we wanted to end up with this:
+    \begin{equation*}
+        Pr[|X_C - \mu_C| > r \sqrt{\mu}] \le \frac{1}{r^2}
+    \end{equation*}
+
+    But what we have is not completely it as we have:
+    \begin{align*}
+        r \sqrt{\mu} &> \frac{\sqrt{fk}}{1-b} r\\
+        |X_A - \mu_A| &> \frac{\sqrt{fk}}{1-a} r
+    \end{align*}
+    and therefore we can not say:
+    \begin{equation*}
+        |X_A - \mu_C| > r \sqrt{\mu_C}
+    \end{equation*}
+
 
 \end{proof}
